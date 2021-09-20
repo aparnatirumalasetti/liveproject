@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/design.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href= "{%  static "font-awesome-4.7.0/css/font-awesome.min.css" %}">
+</head>
+<body>
+   <section class="sub-header">
+     <nav>
+       <a href="website.html"><img src="{% static "images/logo.jpg" %}"></a>
+       <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+         <ul>
+           <li> <a href="{% url "website" %}">HOME</a></li>
+           <li> <a href="{% url "library" %}">LIBRARY</a></li>
+           <li> <a href="{% url "administration" %}">ADMINISTRATION</a></li>
+           <li> <a href="{% url "about" %}">ABOUT</a></li>
+           <li> <a href="{% url "contact" %}">CONTACTUS</a></li>
+           <li> <a href="{% url "register" %}">REGISTER HERE</a></li>
+         </ul>
+       </div>
+       <i class="fa fa-bars" onclick="showmenu()"></i>
+     </nav>
+     <h1>Contact Us</h1>
+   </section>
+<!---contact us content-->
+ <section class="location">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.8809076168554!2d78.45784936487743!3d17.46541328803191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb908f9f2908a5%3A0x78c835835732e101!2sFerozguda%2C%20Bowenpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1624802497582!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ </section>
+
+<section class="contact-us">
+<div class="row">
+<div class="contact-col">
+<div>
+  <i class="fa fa-home"></i>
+  <span>
+    <h5>air india training center road</h5>
+    <p>balajinilaya,firozguda,hyderabad,telangana,india</p>
+  </span>
+</div>
+<div>
+  <i class="fa fa-phone"></i>
+  <span>
+    <h5>9640073888</h5>
+    <p>monday to saturday,10am to 6pm</p>
+  </span>
+</div>
+<div>
+  <i class="fa fa-envelope-o"></i>
+  <span>
+    <h5>manu@school.com</h5>
+    <p>email us your query</p>
+  </span>
+</div>
+</div>
+<div class="contact-col">
+  <form action="form-hadler.php" method="POST">
+    <input type="text" name="name" placeholder="enter your name" required>
+    <input type="email" name="email" placeholder="enter email address" required>
+    <input type="text" name="standard" placeholder="enter your standard" required>
+    <textarea  rows="8" name="message" placeholder="message" required></textarea>
+    <button type="submit" class="hero-btn red-btn">send message</button>
+  </form>
+</div>
+</div>
+</section>
+
+
+
+
+
+<!---footer-->
+<section class="footer">
+<h4>about us</h4>
+<p>aboutschoolparagraphwecanmodifieitlater</p>
+<div class="icons">
+  <i class="fa fa-facebook"></i>
+  <i class="fa fa-twitter"></i>
+  <i class="fa fa-instagram"></i>
+  <i class="fa fa-linkedin"></i>
+</div>
+<p> made_with <i class="fa fa-heart-o"></i> by tirumalasetti aparna</p>
+</section>
+
+
+
+
+<!---javascript_for_toggle_menu-->
+   <script>
+     var navlinks = document.getElementById("navlinks");
+     function showmenu(){
+       navlinks.style.right="0";
+     }
+     function hidemenu(){
+       navlinks.style.right="-200px";
+     }
+   </script>
+</body>
+</html>

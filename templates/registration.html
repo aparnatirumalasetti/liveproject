@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+  {% block content %}
+<form action='' method="post">
+{% csrf_token %}
+<input type=text name="first_name" placeholder="first_name"><br>
+<input type=text name="last_name" placeholder="last_name"><br>
+<input type=email name="email" placeholder="email"><br>
+<input type=standard name="standard" placeholder="standard"><br>
+<input type=mobile name="mobile" placeholder="mobile"><br>
+<input type=Address name="Address" placeholder="Address"><br>
+<input type=submit value="registration_here">
+</form>
+{% endblock %}
+'''{%for i in messages %}
+{{i}}
+{% endfor %}'''

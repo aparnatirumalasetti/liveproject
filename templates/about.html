@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/design.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static "font-awesome-4.7.0/css/font-awesome.min.css" %}">
+</head>
+<body>
+   <section class="sub-header">
+     <nav>
+       <a href="website.html"><img src="{% static "images/logo.jpg" %}"></a>
+       <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+         <ul>
+           <li> <a href="{% url "website" %}">HOME</a></li>
+           <li> <a href="{% url "library" %}">LIBRARY</a></li>
+           <li> <a href="{% url "administration" %}">ADMINISTRATION</a></li>
+           <li> <a href="{% url "about" %}">ABOUT</a></li>
+           <li> <a href="{% url "contact" %}">CONTACTUS</a></li>
+           <li> <a href="{% url "register" %}">REGISTER HERE</a></li>
+         </ul>
+       </div>
+       <i class="fa fa-bars" onclick="showmenu()"></i>
+     </nav>
+     <h1>about us</h1>
+   </section>
+<!---about us content-->
+<section class="about-us">
+<div class="row">
+  <div class="about-col">
+    <h1>we are the_largest_school</h1>
+    <p>CMR Model High school was started in 1999 by "C Malla Reddy Educational Society (registered)".The founder of which was Late Sri C Malla Reddy. Whose vision was to bring quality education to all children, far and wide, privileged or under-privileged.CMR Model High School was proposed to be a model by itself for all round development of personality of the students at the crucial and formative stage.<br>
+      <br>Most of us go through our lives without any goal or purpose. Mr Ch. Malla Reddy knew from the beginning what he was born to do. His dream was to provide quality education to as many students as possible. He therefore, established CMR group of institutions and is eager to take the group to the pinnacle of success.<br>
+        <br>Teachers are the backbone of an institution', says Mr. Gopal Reddy. He lays strong emphasis on the teaching standards and course structure. He is dedicated to the progress of the group and is keenly involved in its day to day functioning. He is easily accessible to his team members and is open to new ideas.<br>
+        <br>Mr. Narasimha Reddy shares his family's dream. He believes that education is the noblest of all services to the mankind. ‘Quality' education demands quality infrastructure and facilities', he says. He is always working towards providing the best of the facilities for the students to make them globally competent.
+</p>
+      <a href="" class="hero-btn red-btn">explore_now</a>
+  </div>
+<div class="about-col">
+  <img src="{% static "images/realschool.jpg" %}">
+</div>
+</div>
+</section>
+<body bgcolor="purple">
+  {% block content %}
+
+  {% endblock %}
+
+
+</body>
+
+
+<!---footer-->
+<section class="footer">
+<h4>about us</h4>
+<p>about school paragraph we can modifieitlater</p>
+<div class="icons">
+  <i class="fa fa-facebook"></i>
+  <i class="fa fa-twitter"></i>
+  <i class="fa fa-instagram"></i>
+  <i class="fa fa-linkedin"></i>
+</div>
+<p> made_with <i class="fa fa-heart-o"></i> by Tirumalasetti Aparna</p>
+</section>
+
+
+
+
+<!---javascript_for_toggle_menu-->
+   <script>
+     var navlinks = document.getElementById("navlinks");
+     function showmenu(){
+       navlinks.style.right="0";
+     }
+     function hidemenu(){
+       navlinks.style.right="-200px";
+     }
+   </script>
+</body>
+</html>
